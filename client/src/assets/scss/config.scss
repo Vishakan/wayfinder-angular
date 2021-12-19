@@ -1,0 +1,123 @@
+/* Font Import */
+@font-face { font-family: 'GillSans';         font-style: normal; font-weight: 400; src: url('../font/GillSans-Regular.ttf'); }
+@font-face { font-family: 'GillSansBold';     font-style: normal; font-weight: 400; src: url('../font/GillSans-Bold.ttf'); }
+@font-face { font-family: 'GillSansSemiBold'; font-style: normal; font-weight: 400; src: url('../font/GillSans-SemiBold.ttf'); }
+
+/* Basic Variables */
+
+// Themeing
+$primary-color: #00529b;
+$secondary-color: #fdbe57;
+$background-color: #fff;
+
+// Total App Size
+$app-width: 1080px;
+$app-height: 1731px;
+
+// Enable animations
+$enable-animations: true;                 // true or false
+$animation-time: 1s;
+
+/* Style Control */
+
+@mixin Banners {
+    background-color: $secondary-color;
+    color: $primary-color;
+}
+
+@mixin Buttons {
+    background-color: $primary-color;
+    color: $background-color;
+    font-size: 24px;
+    font-family: 'GillSansSemiBold';
+  &.selected {
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+}
+$button-shape: 'circle';                    // Options are: circle, square, squarcle, slanted-square, slanted-squarcle
+$button-size: 50px;                         // Sizing of buttons.
+$button-spacing: 10px;                      // Spacing between buttons.
+
+@mixin PopoverClose {                       // Button to close popover. Position/Width is determined by size of #popover.
+    background-color: #cc3300;
+    color: $background-color;
+    height: 40px;
+    font-size: 20px;
+}
+$popover-border-radius: 6px;                // Curly corners for popover.
+
+// Text Styles
+#wrapper { 
+    color: $primary-color;
+    font-family: 'GillSans';
+  .highlighted {
+    color: $secondary-color;
+  }
+}                                           // Specific Selection for text font
+#landing {
+    #welcome    { font-size: 76px; line-height: 83px; }
+    #cta        { font-size: 53px; line-height: 66px; }
+}
+#banner {
+    .title      { font-size: 35px;  }
+    .hint       { font-size: 25px;  }
+}
+#popover {
+    .title      { font-size: 22px; font-family: 'GillSansSemiBold';}
+    .subheader  { font-size: 20px; }
+    .text       { font-size: 18px; }
+}
+
+
+// Scroll Arrows
+$arrow-color: $primary-color;
+$arrow-color-disabled: grey;
+$arrow-size: 20px;                      // Spacing between arrows determined by height of #scroll-buttons
+
+// Location Directory
+$location-entry-height: 60px;
+$fancy-location-background: true;
+$ada-location-scroll-offset: 400px;
+
+/* Layout Map */
+#wrapper {                left: 0px;    top: 0px;       width: $app-width;      height: 1731px;
+    #landing {            left: 0px;    top: 0px;       width: $app-width;      height: 1676px; 
+        #video          { left: 0px;    top: 0px;       width: $app-width;      height: 903px;  }
+        #banner         { left: 0px;    top: 903px;     width: $app-width;      height: 58px;   }
+        #welcome        { left: 70px;   top: 1027px;    width:  940px;      height: auto;   }
+        #cta            { left: 70px;   top: 1237px;    width:  940px;      height: auto;   }
+        #logo           { left: 608px;  bottom: 0;      width:  400px;      height: 300px;  }
+    }
+    #app {                left: 0px;    top: 0px;       width: $app-width;      height: 1676px; 
+        #map            { left: 0px;    top: 0px;       width: $app-width;      height: 903px;  }
+        #floor-buttons  { left: 507px;  top: 825px;     width: 600px;       height: 52px;   
+            .title      { left: 45px;   bottom: 0px;    width: auto;        height: auto;   }
+            .group      { left: 90px;   bottom: 0px;    width: auto;        height: auto;   }
+        }
+        #banner         { left: 0;      top: 903px;     width: $app-width;      height: 58px; 
+            .title      { left: 72px;   top: 8px;       width: auto;        height: auto;   }
+            .hint       { left: 577px;  top: 13px;      width: auto;        height: auto;   }
+        }
+        #letters        { left: 0;      top: 961px;     width: $app-width;      height: 181px;  }
+        #directory      { left: 0;      top: 1142px;    width: $app-width;      height: 534px;  }
+        #scroll-buttons { left: 10px;   top: 1190px;    width: 40px;        height: 86px;   }
+    }
+    #popover            { left: 320px;  top: 1150px;    width: 400px;       height: 200px;
+        .title          { left: 0;      top: 0px;       width: 100%;        height: 50px;   }
+        .subheader      { left: 20px;   top: -10px;     width: 90%;         height: auto;   }
+        .text           { left: 40px;   top:-20px;      width: fit-content; height: auto;   }
+    }
+    #ada-banner         { left: 0;      bottom: 0px;    width: $app-width;  height: 55px;   
+        img             { right: 0;     bottom: 0px;    width: 800px;       height: 55px;   }
+    }
+    &.ada {
+      #app {
+        #letters        { left: 0;      top: 1495px;    width: $app-width;      height: 181px;  }
+        #directory      { left: 0;      top: 961px;     width: $app-width;      height: 534px;  }
+        #floor-buttons  { left: 0; top: $app-height - 55px; width: 600px;   height: 52px;   }
+        #scroll-buttons { left: 10px;   top: 1570px;    width: 40px;        height: 86px;   }
+      }
+      #popover          { left: 320px;  top: 1350px;    width: 400px;       height: 200px;  }
+    }
+}

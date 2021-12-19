@@ -1,0 +1,302 @@
+#wrapper {
+  &, div { position: absolute;}
+  background-color: $background-color;
+  overflow: hidden;
+}
+
+#wrapper #landing {
+  #video > video { width: 100%; height: 100%; }
+  #logo img { width: 100%; height: 100%; object-fit: cover; }
+}
+#app {
+    @if $fancy-location-background {
+      background: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.0),  rgba(0,0,0,0.1) );
+      &.two-cols { background: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.0), rgba(0,0,0,0.1),  rgba(0,0,0,0.0),  rgba(0,0,0,0.1) ); }
+    }
+    #map {
+        background-size: cover;
+        background-position: center;
+        background-color: $background-color;
+        z-index: 5;
+    }
+    #floor-buttons {
+        background: linear-gradient(to right, rgba(0,0,0,.005),  rgba(0,0,0,.3),  rgba(0,0,0,.3), rgba(0,0,0,.3), rgba(0,0,0,.4), rgba(0,0,0,0.4), rgba(0,0,0,0.5));
+        > * { position: relative; }
+        display: flex;
+        z-index: 6;
+        display:flex;
+        align-items: center;
+    }
+    #letters {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-left: 40px;
+        padding-right: 40px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        z-index: 3;
+        @if $enable-animations {
+          background-color: $background-color;
+          transition: top $animation-time/2 ease-in-out, box-shadow $animation-time $animation-time/2 ease-in-out;
+        }
+    }
+    #directory {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      overflow-y: scroll;
+      height: 100%;
+      @if $fancy-location-background {
+        background: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.0),rgba(0,0,0,0.1));
+      }
+      @if $enable-animations {
+        background-color: $background-color;
+        transition: top $animation-time ease-in-out;
+      }
+      .column {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: max-content;
+        @if $fancy-location-background {
+          background-color: $background-color;
+        }
+        border-right: 3px solid rgba(0,0,0,0.2);
+        &:last-child { border-right: 0px; }
+        z-index: 2;
+        .entry {
+          height: $location-entry-height;
+          @if $fancy-location-background {
+            background: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.0),rgba(0,0,0,0.1));
+          }
+          display: flex;
+          align-items: center;
+          position: relative;
+          text-indent: 80px;
+          font-size: 20px;
+          border-bottom: rgba(0,0,0,0.03) solid 1px;
+        }
+      }
+      .offset {
+        height: 0px;
+        @if $enable-animations {
+          transition: height $animation-time $animation-time ease-out;
+        }
+      }
+    }
+    #scroll-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 3;
+        @if $enable-animations {
+          transition: top $animation-time ease-in-out;
+        }
+        > div {
+          position: relative;
+          width: $arrow-size;
+          height: $arrow-size;
+          z-index: 2;
+        }
+    }
+}
+
+#wrapper.ada #app {
+   #floor-buttons {
+    background: transparent;
+  }
+  #letters {
+    box-shadow: 0px -4px 3px rgba(0,0,0,0.25);
+    @if $enable-animations {
+      transition: top $animation-time $animation-time ease-in-out, box-shadow $animation-time $animation-time ease-in-out;
+    }
+  }
+  #directory .offset {
+    position: relative;
+    height: $ada-location-scroll-offset;
+    @if $fancy-location-background {
+      background: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.0),rgba(0,0,0,0.1));
+    }
+    @if $enable-animations {
+      transition: height $animation-time $animation-time ease-in-out;
+    }
+  }
+  #scroll-buttons {
+    @if $enable-animations {
+      transition: top $animation-time $animation-time *1.4  ease-in-out;
+    }
+  }
+}
+
+#popover-overlay {
+  background-color: rgba(255,255,255,.5);
+  z-index: 4;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+#popover {
+  > div { position: relative;}
+  background-color: $background-color;
+  z-index: 6;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  display: flex;
+  border-radius: $popover-border-radius;
+  flex-direction: column;
+  justify-content: space-between;
+  .title {
+    @include Banners;
+    border-top-left-radius: $popover-border-radius;
+    border-top-right-radius: $popover-border-radius;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .subheader {
+    border-bottom: 1px solid rgba(0,0,0,0.2)
+  }
+  button {
+    @include PopoverClose;
+    border-radius: $popover-border-radius;
+    padding: 0;
+    border-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 10px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+  }
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: $arrow-size solid transparent;
+  border-right: $arrow-size solid transparent;
+  border-top: $arrow-size solid $arrow-color;
+  transform: rotate(180deg);
+  &.disabled {
+    border-top-color: $arrow-color-disabled;
+  }
+}
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: $arrow-size solid transparent;
+  border-right: $arrow-size solid transparent;
+  border-top: $arrow-size solid $arrow-color;
+  &.disabled {
+    border-top-color: $arrow-color-disabled;
+  }
+}
+p { margin: 0px }
+.btn {
+    @include Buttons;
+    width: $button-size;
+    height: $button-size;
+    @if $button-shape == 'circle' {
+      border-radius: $button-size / 2;
+    }
+    @if $button-shape == 'squarcle' {
+      border-radius: $button-size / 4;
+    }
+    @if $button-shape == 'slanted-square' {
+      transform: skew(25deg);
+      p {
+        transform: skew(-25deg);
+      }
+    }
+    @if $button-shape == 'slanted-squarcle' {
+      border-radius: $button-size / 4;
+      transform: skew(20deg);
+      p {
+        transform: skew(-20deg);
+      }
+    }
+    padding: 0;
+    border-width: 0;
+    margin-left: $button-spacing;
+    margin-right: $button-spacing;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    transition: background-color .3s;
+    &:before {    
+      background-color: rgba(236, 240, 241, .3);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    &:active::before {
+      width: 50%;
+      padding-top: 50%;
+      transition: width .2s ease-out, padding-top .2s ease-out;
+    }
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+#banner {
+    @include Banners;
+}
+#ada-banner {
+  @include Banners;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@keyframes spin-right {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg);}
+}
+@keyframes roll-back {
+  0% { transform: rotate(360deg); }
+  50% { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); }
+
+}
+
+.loader { // Expiremented with this
+  $loading-animation-size: 150px;
+  $loading-animation-size-circle: 40px;
+  background-color: transparent;
+  z-index: 200;
+  width: $loading-animation-size;
+  height: $loading-animation-size;
+  left: 475px;
+  top: 305px;
+  animation: spin-right 1s linear infinite;
+  border-right: 10px #00529b solid;
+  border-radius: $loading-animation-size/2;
+
+  .circle {
+    position: relative;
+    top: $loading-animation-size/3;
+    left: $loading-animation-size-circle/2 + $loading-animation-size-circle;
+    width: $loading-animation-size-circle;
+    height: $loading-animation-size-circle;
+    border-radius: 20px;
+    border: 10px #00529b solid;
+  }
+}
+
+html, body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+div {
+  scrollbar-width: none;
+
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}

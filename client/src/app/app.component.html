@@ -1,0 +1,38 @@
+<div id="wrapper" [class.ada]="adaEnabled" (click)="timerReset()">
+    <app-landing *ngIf="showLanding" (click)="onLandingClick()"></app-landing>
+    <div id="app" *ngIf="!showLanding" [class.two-cols]="getLocations().length === 2">
+        <div id="map" [style.background-image]="getMapUrl()">
+            <div *ngIf="false" class="loader"><div class="circle"></div></div>
+        </div>
+        <div id="floor-buttons" *ngIf="popoverTarget === null">
+            <h1 class="title" *ngIf="!adaEnabled">{{floorButtonText}}</h1>
+            <div class="group"><button class="btn" *ngFor="let floor of getFloors()" (click)="changeFloor(floor)" [class.selected]="floor===selectedFloor"><p>{{floor}}</p></button></div>
+        </div>
+        <div id="banner">
+            <div class="title">{{bannerTitle}}</div>
+            <div class="hint">{{bannerHint}}</div>
+        </div>
+        <div id="letters">
+            <button class="btn" *ngFor="let letter of getLetters()" (click)="changeLetter(letter)" [class.selected]="letter===selectedLetter"><p>{{letter}}</p></button>
+        </div>
+        <div id="directory" class="directory" (scroll)="checkScroll()" (mousedown)="mouseDown($event)" (mouseup)="mouseUp()" (mouseleave)="mouseUp()" (mousemove)="mouseMove($event)">
+            <div class="column" *ngFor="let column of getLocations()">
+                <div  class="offset"></div>
+                <div class="entry" *ngFor="let location of column" (click)="onLocationClick(location)">{{location.location}}</div>
+            </div>
+        </div>
+        <div id="scroll-buttons" (click)="stopPropogation($event)" *ngIf="scrollButtonEnabled && (canScrollUp || canScrollDown)">
+            <div class="arrow-up" (click)="onScrollArrowClick($event, 'up')" [class.disabled]="!canScrollUp"></div>
+            <div class="arrow-down" (click)="onScrollArrowClick($event, 'down')" [class.disabled]="!canScrollDown"></div>
+        </div>
+    </div>
+    <div id="popover-overlay" *ngIf="popoverTarget !== null" (click)="onPopoverExitClick()">
+        <div id="popover"   (click)="stopPropogation($event)">
+            <div class="title">{{popoverTarget.location}}</div>
+            <div class="subheader">{{popoverTarget.subheader}}</div>
+            <div class="text">{{popoverTarget.directions}}</div>
+            <button class="exit-btn" (click)="onPopoverExitClick()">Close</button>
+        </div>
+    </div>
+    <div id="ada-banner"><img src="{{adaButtonSrc}}" *ngIf="adaEnabled === false" (click)="toggleAda()"><img src="{{adaExitSrc}}" *ngIf="adaEnabled === true" (click)="toggleAda()"></div>
+</div>

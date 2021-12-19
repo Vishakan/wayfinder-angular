@@ -1,0 +1,404 @@
+{
+  "spreadsheetId": "ABC",
+  "valueRanges": [
+    {
+      "majorDimension": "ROWS",
+      "range": "'Home Pic and Floor Maps'!A1:AB1000",
+      "values": [
+        [
+          "Id",
+          "Image URL",
+          "Image",
+          "Button label"
+        ],
+        [
+          "site",
+          "\\/data\\/images\\/site\\/b34329ea-40bf-4c48-9494-42fbcc71e62e.png",
+          "",
+          ""
+        ],
+        [
+          "floor-1",
+          "\\/data\\/images\\/site\\/G0001.png",
+          "",
+          "1A"
+        ],
+        [
+          "floor-2",
+          "\\/data\\/images\\/site\\/G0002.png",
+          "",
+          "1B"
+        ],
+        [
+          "floor-3",
+          "\\/data\\/images\\/site\\/S0001.png",
+          "",
+          "2"
+        ],
+        [
+          "floor-4",
+          "\\/data\\/images\\/site\\/T0001.png",
+          "",
+          "3"
+        ]
+      ]
+    },
+    {
+      "majorDimension": "ROWS",
+      "range": "Locations!A1:Y1000",
+      "values": [
+        [
+          "Letter Filters",
+          "Location",
+          "Subheader",
+          "Directions",
+          "Image URL",
+          "Image",
+          ""
+        ],
+        [
+          "C",
+          "102 - Conciergerie en chef",
+          "102 - Conciergerie en chef",
+          "102 - Conciergerie en chef",
+          "\\/data\\/images\\/C\\/102-Conciergerie-en-chef.png",
+          "",
+          ""
+        ],
+        [
+          "B",
+          "104 - Banque alimentaire",
+          "104 - Banque alimentaire",
+          "104 - Banque alimentaire",
+          "\\/data\\/images\\/B\\/104-Banque-alimentaire.png",
+          "",
+          ""
+        ],
+        [
+          "A",
+          "104.01 - Ami Jeunesse",
+          "104.01 - Ami Jeunesse",
+          "104.01 - Ami Jeunesse",
+          "\\/data\\/images\\/A\\/104-01-Ami-jeunesse.png",
+          "",
+          ""
+        ],
+        [
+          "G",
+          "105 - Gymnase",
+          "105 - Gymnase",
+          "105 - Gymnase",
+          "\\/data\\/images\\/G\\/105-Gymnase.png",
+          "",
+          ""
+        ],
+        [
+          "S",
+          "105 - Salle multifonctionnelle",
+          "105 - Salle multifonctionnelle",
+          "105 - Salle multifonctionnelle",
+          "\\/data\\/images\\/S\\/105-Salle-multifonctionnelle.png",
+          "",
+          ""
+        ],
+        [
+          "A",
+          "105.01 - Auditorium communautaire",
+          "105.01 - Auditorium communautaire",
+          "105.01 - Auditorium communautaire",
+          "\\/data\\/images\\/A\\/105-01-Auditorium-communautaire.png",
+          "",
+          ""
+        ],
+        [
+          "C",
+          "105 .06  - Cafe Bistro",
+          "105 .06  - Cafe Bistro",
+          "105 .06  - Cafe Bistro",
+          "\\/data\\/images\\/C\\/105-06-Café-Bistro.png",
+          "",
+          ""
+        ],
+        [
+          "R",
+          "106 - Réception",
+          "106 - Réception",
+          "106 - Réception",
+          "\\/data\\/images\\/R\\/106-Réception.png",
+          "",
+          ""
+        ],
+        [
+          "S",
+          "108 - Services de santé Montfort",
+          "108 - Services de santé Montfort",
+          "108 - Services de santé Montfort",
+          "\\/data\\/images\\/S\\/108-Services-de-santé-Montfort.png",
+          "",
+          ""
+        ],
+        [
+          "C",
+          "108.01 - Centre Montfort",
+          "108.01 - Centre Montfort",
+          "108.01 - Centre Montfort",
+          "\\/data\\/images\\/C\\/108-01-Centre-Montfort.png",
+          "",
+          ""
+        ],
+        [
+          "C",
+          "110 - Cuisine Communautaire",
+          "110 - Cuisine Communautaire",
+          "110 - Cuisine Communautaire",
+          "\\/data\\/images\\/C\\/110-Cuisine-Communautaire.png",
+          "",
+          ""
+        ],
+        [
+          "C",
+          "114 - Centre de famille On y va",
+          "114 - Centre de famille On y va",
+          "114 - Centre de famille On y va",
+          "\\/data\\/images\\/C\\/114-Centre-de-famille-On-y-va.png",
+          "",
+          ""
+        ],
+        [
+          "H",
+          "118 - Halte Garderie le Cerf-Volant",
+          "118 - Halte Garderie le Cerf-Volant",
+          "118 - Halte Garderie le Cerf-Volant",
+          "\\/data\\/images\\/H\\/118-Halte-garderie-le-Cerf-Volant.png",
+          "",
+          ""
+        ],
+        [
+          "S",
+          "120 - Service de garde le manège",
+          "120 - Service de garde le manège",
+          "120 - Service de garde le manège",
+          "\\/data\\/images\\/S\\/120-Service-de-garde-le-manège.png",
+          "",
+          ""
+        ],
+        [
+          "R",
+          "203 - Réception Le Carrefour",
+          "203 - Réception Le Carrefour",
+          "203 - Réception Le Carrefour",
+          "\\/data\\/images\\/R\\/203-Réception-Le-Carrefour.png",
+          "",
+          ""
+        ],
+        [
+          "D",
+          "203.01-Direction Le Carrefour",
+          "203.01-Direction Le Carrefour",
+          "203.01-Direction Le Carrefour",
+          "\\/data\\/images\\/D\\/203-01-Direction-Le-Carrefour.png",
+          "",
+          ""
+        ],
+        [
+          "S",
+          "202 - Salle Scolaire 1 - Le Carrefour",
+          "202 - Salle Scolaire 1 - Le Carrefour",
+          "202 - Salle Scolaire 1 - Le Carrefour",
+          "\\/data\\/images\\/S\\/202-Salle-Scolaire-1-Le-Carrefour.png",
+          "",
+          ""
+        ],
+        [
+          "S",
+          "204 - Salle Scolaire 2 - Le Carrefour",
+          "204 - Salle Scolaire 2 - Le Carrefour",
+          "204 - Salle Scolaire 2 - Le Carrefour",
+          "\\/data\\/images\\/S\\/204-Salle-Scolaire-2-Le-Carrefour.png",
+          "",
+          ""
+        ],
+        [
+          "S",
+          "205 - Salle Scolaire 3 - Le Carrefour",
+          "205 - Salle Scolaire 3 - Le Carrefour",
+          "205 - Salle Scolaire 3 - Le Carrefour",
+          "\\/data\\/images\\/S\\/205-Salle-Scolaire-3-Le-Carrefour.png",
+          "",
+          ""
+        ],
+        [
+          "S",
+          "206  - Salle Scolaire 4 - Le Carrefour",
+          "206  - Salle Scolaire 4 - Le Carrefour",
+          "206  - Salle Scolaire 4 - Le Carrefour",
+          "\\/data\\/images\\/S\\/206-Salle-Scolaire-4-Le-Carrefour.png",
+          "",
+          ""
+        ],
+        [
+          "C",
+          "302 - Centre Soleil",
+          "302 - Centre Soleil",
+          "302 - Centre Soleil",
+          "\\/data\\/images\\/C\\/302-Centre-Soleil.png",
+          "",
+          ""
+        ],
+        [
+          "R",
+          "302 - Retraite en Action",
+          "302 - Retraite en Action",
+          "302 - Retraite en Action",
+          "\\/data\\/images\\/R\\/302-Retraite-en-Action.png",
+          "",
+          ""
+        ],
+        [
+          "S",
+          "303 - Salle Scolaire 5 - le Carrefour",
+          "303 - Salle Scolaire 5 - le Carrefour",
+          "303 - Salle Scolaire 5 - le Carrefour",
+          "\\/data\\/images\\/S\\/303-Salle-Scolaire-5-le-Carrefour.png",
+          "",
+          ""
+        ],
+        [
+          "S",
+          "303 - Salle Communautaire",
+          "303 - Salle Communautaire",
+          "303 - Salle Communautaire",
+          "\\/data\\/images\\/S\\/303-Salle-communautaire.png",
+          "",
+          ""
+        ],
+        [
+          "R",
+          "304 - Réception Cité Collégiale",
+          "304 - Réception Cité Collégiale",
+          "304 - Réception Cité Collégiale",
+          "\\/data\\/images\\/R\\/304-Réception-Cité-Collégiale.png",
+          "",
+          ""
+        ],
+        [
+          "D",
+          "304.01 - Direction Cité Collégiale",
+          "304.01 - Direction Cité Collégiale",
+          "304.01 - Direction Cité Collégiale",
+          "\\/data\\/images\\/R\\/304-01-Direction-Cité-Collégiale.png",
+          "",
+          ""
+        ],
+        [
+          "S",
+          "305 - Salle de Rencontre",
+          "305 - Salle de Rencontre",
+          "305 - Salle de Rencontre",
+          "\\/data\\/images\\/S\\/305-Salle-de-Rencontre.png",
+          "",
+          ""
+        ],
+        [
+          "C",
+          "305.01 - Cuisinette Communautaire",
+          "305.01 - Cuisinette Communautaire",
+          "305.01 - Cuisinette Communautaire",
+          "\\/data\\/images\\/C\\/305-01-Cuisinette-Communautaire.png",
+          "",
+          ""
+        ],
+        [
+          "S",
+          "306 - Salle de formation 1 -  Cité collégiale",
+          "306 - Salle de formation 1 -  Cité collégiale",
+          "306 - Salle de formation 1 -  Cité collégiale",
+          "\\/data\\/images\\/S\\/306-Salle-de-formation-1-Cité-collégiale.png",
+          "",
+          ""
+        ],
+        [
+          "S",
+          "308 - Salle de formation 2 -  Cité collégiale",
+          "308 - Salle de formation 2 -  Cité collégiale",
+          "308 - Salle de formation 2 -  Cité collégiale",
+          "\\/data\\/images\\/S\\/308-Salle-de-formation-2-Cité-collégiale.png",
+          "",
+          ""
+        ],
+        [
+          "C",
+          "310 - CÉSOC",
+          "310 - CÉSOC",
+          "310 - CÉSOC",
+          "\\/data\\/images\\/C\\/310-CÉSOC.png",
+          "",
+          ""
+        ],
+        [
+          "C",
+          "312 - CMFO",
+          "312 - CMFO",
+          "312 - CMFO",
+          "\\/data\\/images\\/C\\/312-CMFO.png\n",
+          "",
+          ""
+        ],
+        [
+          "T",
+          "112.03 Toilette Homme",
+          "112.03 Toilette Homme",
+          "112.03 Toilette Homme",
+          "\\/data\\/images\\/T\\/112-03-Toilettes-Homme.png",
+          "",
+          ""
+        ],
+        [
+          "T",
+          "112.04 Toilette Femme",
+          "112.04 Toilette Femme",
+          "112.04 Toilette Femme",
+          "\\/data\\/images\\/T\\/112-04-Toilettes-Femme.png",
+          "",
+          ""
+        ],
+        [
+          "T",
+          "201 Toilette Homme",
+          "201 Toilette Homme",
+          "201 Toilette Homme",
+          "\\/data\\/images\\/T\\/201-Toilettes-Homme.png",
+          "",
+          ""
+        ],
+        [
+          "T",
+          "207 Toilette Femme",
+          "207 Toilette Femme",
+          "207 Toilette Femme",
+          "\\/data\\/images\\/T\\/207-Toilettes-Femme.png",
+          "",
+          ""
+        ],
+        [
+          "T",
+          "301 Toilette Homme",
+          "301 Toilette Homme",
+          "301 Toilette Homme",
+          "\\/data\\/images\\/T\\/301-Toilettes-Homme.png",
+          "",
+          ""
+        ],
+        [
+          "T",
+          "307 Toilette Femme",
+          "307 Toilette Femme",
+          "307 Toilette Femme",
+          "\\/data\\/images\\/T\\/307-Toilettes-Femme.png",
+          "",
+          ""
+        ]
+      ]
+    }
+  ]
+}
