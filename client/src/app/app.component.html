@@ -1,6 +1,6 @@
 <div id="wrapper" [class.ada]="adaEnabled" (click)="timerReset()">
-    <app-landing *ngIf="showLanding" (click)="onLandingClick()"></app-landing>
-    <div id="app" *ngIf="!showLanding" [class.two-cols]="getLocations().length === 2">
+    <app-landing *ngIf="showLanding" [@fadeAnimation] (click)="onLandingClick()"></app-landing>
+    <div id="app" *ngIf="!showLanding" [@fadeAnimation] [class.two-cols]="getLocations().length === 2">
         <div id="map" [style.background-image]="getMapUrl()">
             <div *ngIf="false" class="loader"><div class="circle"></div></div>
         </div>

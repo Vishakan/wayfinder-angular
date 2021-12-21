@@ -1,6 +1,7 @@
 import { environment } from 'src/environments/environment';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ApiService } from './services/api.service';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 declare interface Floor {
   buttonLabel: string;
@@ -19,6 +20,29 @@ declare interface Location {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  animations: [
+    trigger(
+      'fadeAnimation', 
+      [
+        transition(
+          ':enter', 
+          [
+            style({ opacity: 0 }),
+            animate('1s ease-out', 
+                    style({ opacity: 1 }))
+          ]
+        ),
+        transition(
+          ':leave', 
+          [
+            style({ opacity: 1 }),
+            animate('1s ease-in', 
+                    style({ opacity: 0 }))
+          ]
+        )
+      ]
+    )
+  ]
 })
 export class AppComponent implements OnInit {
 
